@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Abel", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: #0c2a6b;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    background: #ffffff9c;
+    z-index: 9999;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 185px;
+}
+
+.moreLink {
+
+}
+
+main {
+    margin-top: 102px;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.priceArea,
+.afterArea {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.leftBox,
+.rightBox {
+    width: 45%;
+}
+
+main .priceArea:nth-child(even),
+.afterArea {
+    margin-top: 20px;
+}
+
+.rPrice,
+.nPrice {
+    display: flex;
+    flex-direction: column;
+}
+
+.nPrice {
+    margin-top: 10px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    color: #fd5928;
+    font-weight: 700;
+    background-color: rgb(243, 243, 243);
+}
+
+input::placeholder {
+    font-size: .9rem;
+    color: #cacaca;
+}
+
+input:focus {
+    outline: 2px rgb(255, 209, 42) solid;
+}
+
+.total span:nth-child(even) {
+    font-size: .9rem;
+}
+
+.total span:nth-child(odd) {
+    margin: 0 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fd5928;
+}
+
+h6 {
+margin-top: 5px;
+color:#595959
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.afterArea {
+    text-align: center;
+}
+.afterArea .leftBox,
+.afterArea .midBox,
+.afterArea .rightBox {
+    width: 32%;
+}
+
+.afterArea h3 {
+    margin-bottom: 10px;
+}
+
+.afterArea h4{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.cardTotal span:nth-child(odd),
+.remitTotal span:nth-child(odd) {
+    margin: 0 8px;
+    color: #fd5928;
+    font-size: 1.4rem;
+}
+
+.midBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.afterArea .rightBox span:nth-child(odd){
+    margin: unset;
+    color: #0c2a6b;
+    font-size: 1rem;
+}
+
+.afterArea  .rightBox span:nth-child(even) {
+    display: inline-block;
+    margin: 2px 8px;
+    padding: 0 8px;
+    background: #fd5928;
+    color: #f8f8ff;
+    font-size: 1.4rem;
+    border-radius: 10px;
+}
+
+.notice {
+    margin-top: 15px;
+    padding: 5px 25px;
+    background: #0c2a6b;
+    color: #f8f8ff;
+    border-radius: 10px;
+}
+
+footer {
+    margin-top: 60px;
+    font-size: .9rem;
+}
+
+@media (max-width: 720px) {
+    .priceArea, .afterArea {
+        flex-direction: column;
+    }
+    .leftBox, .rightBox,
+    .afterArea .leftBox, .afterArea .midBox, .afterArea .rightBox {
+        width: 90%;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅市假期 | 60%</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Noto+Sans+TC:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="count.css">
+</head>
+
+<body>
+    <header>
+        <a href="https://www.tourm.com.tw/" class="logo">
+            <img src="./images/logo2.png" alt="">
+        </a>
+    </header>
+    <main>
+        <div class="priceArea">
+            <div class="leftBox">
+                <div class="rPrice">
+                    <label for="price">直售價
+                    </label>
+                    <input type="number" name="" id="price" placeholder="單位: 每人" oninput="calculate()">
+                </div>
+                <div class="nPrice">
+                    <label for="net">同業價</label>
+                    <input type="number" name="" id="net" placeholder="單位: 每人" oninput="calculate()">
+                </div>
+            </div>
+            <div class="rightBox">
+                <div class="total">
+                    <h4>後退(總利潤)</h4>
+                    <span>$</span><span id="profit">請完整輸入直售及同業價</span><span>/人</span>
+                    <h6>
+                        算法: 直售價－同業價
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <div class="priceArea">
+            <div class="leftBox">
+                <div class="rPrice">
+                    <label for="cardDiscount">刷卡優惠
+                    </label>
+                    <input type="number" name="" id="cardDiscount" placeholder="單位: 每人" oninput="calculate()">
+                </div>
+                <div class="nPrice">
+                    <label for="remit">匯款優惠</label>
+                    <input type="number" name="" id="remitDiscount" placeholder="單位: 每人" oninput="calculate()">
+                </div>
+                <div class="nPrice">
+                    <label for="remit">其他成本(ex:網卡.機場接送)</label>
+                    <input type="number" name="" id="other" placeholder="單位: 每人" oninput="calculate()">
+                </div>
+            </div>
+            <div class="rightBox">
+                <div class="total">
+                    <h4>刷卡優惠後團費</h4>
+                    <span>$</span><span id="cardPrice">??</span><span>/人</span>
+                    <h4>匯款優惠後團費</h4>
+                    <span>$</span><span id="remitPrice">??</span><span>/人</span>
+                    <h4>刷卡手續費</h4>
+                    <span>$</span><span id="cardFee">請輸入刷卡優惠金額</span><span>/人</span>
+                    <h6>
+                        算法: 優惠後團後 X 0.02
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <h2>最後總利潤</h2>
+        <div class="afterArea">
+            <div class="leftBox">
+                <div class="cardTotal">
+                    <h4>刷卡</h4>
+                    <span>$</span><span id="card">???</span><span>/人</span>
+                </div>
+                <div class="remitTotal">
+                    <h4>匯款</h4>
+                    <span>$</span><span id="remit">???</span><span>/人</span>
+                </div>
+            </div>
+            <div class="midBox">
+                <input type="number" name="" id="cardPeople" placeholder="報名人數 (刷卡)" oninput="calculate()">
+                <input type="number" name="" id="remitPeople" placeholder="報名人數 (匯款)" oninput="calculate()">
+            </div>
+            <div class="rightBox">
+                <div class="cardTotal">
+                    <span>$</span><span id="cardTotal">???</span>
+                </div>
+                <div class="remitTotal">
+                    <span>$</span><span id="remitTotal">???</span>
+                </div>
+            </div>
+
+        </div>
+        <p class="notice">上述利潤不含郵寄費，郵資費用因重量而定，暫無法估算</p>
+        <footer>
+            <p>旅市旅行社有限公司 | 02-25080283 | service@tourm.com.tw | 台北市中山區南京東路二段132號7樓之1</p>
+        </footer>
+    </main>
+    <script src="count.js"></script>
+</body>
+
+</html>
